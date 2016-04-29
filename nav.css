@@ -1,0 +1,18 @@
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ }
+.dropdown-menu > li > a:hover {
+    background-color: #0059b3;
+    background-image: none;
+    color: white;
+}
+.navbar-nav > li > .dropdown-menu { 
+  background-color: black; 
+}
+ .dropdown-menu li>a{
+  color:white; 
+}
+nav{
+	font-family: 'Special Elite';
+}

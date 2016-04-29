@@ -1,0 +1,29 @@
+body{ 
+  /*background-size: cover;*/
+  background-color: black;
+	color: blue;
+	padding-top: 50px;
+}
+
+a:visited{
+  color:white;
+}
+.wrap{
+  text-align:center;
+    position:relative;
+}
+.headline{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  height:100px;
+  font-size: 4vh;
+  font-family: 'Special Elite';
+}
+img{
+  max-width: 100%;
+}

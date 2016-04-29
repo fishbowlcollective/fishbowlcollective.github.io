@@ -1,0 +1,14 @@
+body{
+	background-color: black;
+	color: white;
+	font-family: 'PT Mono';
+}
+img{
+	max-width: 100%;
+}
+.hidden{
+	display: none;
+}
+p{
+	font-size: 18px;
+}

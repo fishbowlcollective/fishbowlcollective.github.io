@@ -1,0 +1,35 @@
+body{
+	background-color: black;
+	color: white;
+  font-family: 'PT Mono';
+}
+.wrap{
+  text-align:center;
+    position:relative;
+}
+.headline{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  height:100px;
+  font-family: 'Special Elite';
+}
+img{
+	max-width: 100%;
+}
+.reviews{
+  text-align: center;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+.hidden{
+  display: none;
+}
+p{
+  font-size: 18px;
+}

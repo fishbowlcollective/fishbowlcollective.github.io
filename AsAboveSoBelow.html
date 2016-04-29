@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<title>As Above So Below</title>
+
+  	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="aasb.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Mono">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Special+Elite">
+
+
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="pull-left" href="#">
+          <img alt="Brand" src="images/12987994_969917723086305_2029939707_n.jpg" height="45px" style="padding: 0px;">
+        </a>
+        <a class="navbar-brand" href="Shows.html">Fishbowl Collective</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a href="Manifesto.html">Manifesto</a></li>
+          <li class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="Shows.html">Shows<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="AsAboveSoBelow.html">As Above So Below</a></li>
+              <li><a href="AnOdeToDyads.html">An Ode to Dyads</a></li>
+              <li><a href="Tenderhooks.html">Tenderhooks</a></li> 
+              <li><a href="WhatTheFuckAmIDoingHere.html">What The Fuck Am I Doing Here?</a></li>
+            </ul>
+          </li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="OtherProjects.html">Other Projects</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://www.facebook.com/Fishbowl-Collective-768690956483644/?fref=ts"><i class="fa fa-lg fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/fishbowlc"><i class="fa fa-lg fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <img src="images/AsAboveSoBelow/12980868_969929206418490_1976975038_o.jpg">
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+    <!--content-->
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <center>
+          <p style="padding: 25px">
+            What is the feminine? Can one find its definition within its own negation? Challenging their constructed identities, two women hijack the stage, taking a twisted look into the entrails of femininity and its bestial, carnal, bouffon-esque manifestations.
+          </p>
+        </center>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+
+    <!--video-->
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <center>
+          <iframe id="vid" src="https://player.vimeo.com/video/156752515" width="700" height="525" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </center>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row" style="padding:25px"></div>
+
+
+    <!--gallery-->
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+
+       <div class="row">
+          <div class="col-sm-12">
+            <center>
+              <img id="img01" onClick="activateModal(this)" class="galleryImage" style="max-width: 49%;" src="images/AsAboveSoBelow/938526_946636562081088_1630902642_o.jpg" alt="Paprika Festival 2015">
+              <img id="img02" onClick="activateModal(this)" class="galleryImage" style="max-width: 49%;" src="images/AsAboveSoBelow/12823056_946636508747760_465869759_o.jpg" alt="Paprika Festival 2015">
+            </center>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <center>
+              <img id="img03" onClick="activateModal(this)" class="galleryImage" style="max-width: 49%;" src="images/AsAboveSoBelow/12837682_946636602081084_526207306_o.jpg" alt="Paprika Festival 2015">
+              <img id="img04" onClick="activateModal(this)" class="galleryImage" style="max-width: 49%;" src="images/AsAboveSoBelow/12837317_946637048747706_1108919491_o.jpg" alt="Paprika Festival 2015">
+            </center>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <center>
+              <img id="img05" onClick="activateModal(this)" class="galleryImage" style="max-width: 49%;" src="images/AsAboveSoBelow/13023573_972636072814470_1476945199_n.jpg" alt="Paprika Gala 2015">
+              <img id="img06" onClick="activateModal(this)" class="galleryImage" style="max-width: 49%;" src="images/AsAboveSoBelow/13020600_972636059481138_2052432806_n.jpg" alt="Paprika Gala 2015">
+            </center>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <center>
+              <img id="img07" onClick="activateModal(this)" class="galleryImage" style="max-width: 40%;" src="images/AsAboveSoBelow/13016527_972637549480989_915710740_o.jpg" alt="Aftermath of Players' Theatre Show">
+            </center>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+
+  </div>
+
+  <!--modal-->
+  <div id="myModal" class="modal">
+    <!-- The Close Button -->
+    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+    <!--forward button-->
+    <span id="forwardButton" class="forward" onclick="imageForward()">&gt;</span>
+
+    <!--back button-->
+    <span id="backButton" class="back" onclick="imageBack()">&lt;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="modalImage">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
+  <script>
+    //create array of all the images in gallery in order to scroll through them
+    var imageList=["img01", "img02", "img03", "img04", "img05", "img06", "img07"];
+    var currentImage;//maybe use this for name purposes cause my not be able to pull id from anywehre else outside of contect of function
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById("modalImage");
+    var captionText = document.getElementById("caption");
+
+    //function for placing the image in the modal
+    function activateModal(img){
+      modal.style.display="block";
+      modalImg.src = img.src; //puts image this image in the modal
+      modalImg.alt = img.alt; //sets up for the caption
+      captionText.innerHTML = img.alt; //places the caption
+      currentImage = img.id; //mark the current image
+      checkArrows(img.id); //hide or display arrows to scroll
+    }
+
+    //move forward in the gallery
+    function imageForward(){
+      //if arrow is hidden, no more to scroll to and so just return
+      if(document.getElementById("forwardButton").style.display === "none"){
+        return;
+      }
+
+      //else take next image 
+      var newIndex = imageList.indexOf(currentImage) + 1; //get index of array
+      var newImage = imageList[newIndex]; //get the name
+      newImage = document.getElementById(newImage); //get the element
+
+      //replace it in modal
+      modalImg.src = newImage.src;
+      modalImg.alt = newImage.alt;
+      captionText.innerHTML = newImage.alt;
+
+      //update current image and check arrows
+      currentImage = newImage.id;
+      checkArrows(currentImage);
+    }
+
+    //move back in the gallery
+    function imageBack(){
+      //if arrow is hidden, no more to scroll to and so just return
+        if(document.getElementById("backButton").style.display === "none"){
+        return;
+      }
+
+      //else take next image 
+      var newIndex = imageList.indexOf(currentImage) - 1; //get index of array
+      var newImage = imageList[newIndex]; //get the name
+      newImage = document.getElementById(newImage); //get the element
+
+      //replace it in modal
+      modalImg.src = newImage.src;
+      modalImg.alt = newImage.alt;
+      captionText.innerHTML = newImage.alt;
+
+      //update current image and check arrows
+      currentImage = newImage.id;
+      checkArrows(currentImage);
+    }
+
+    //check if there should be forward and back arrows according to where in the gallery
+    function checkArrows(imageName){
+      //ifthere should be no back button
+      if(imageList.indexOf(imageName) === 0){
+        document.getElementById("backButton").style.display="none";
+        document.getElementById("forwardButton").style.display="block";
+      }
+      //if there should be no forward button
+      else if(imageList.indexOf(imageName) === imageList.length - 1){
+        document.getElementById("forwardButton").style.display="none";
+        document.getElementById("backButton").style.display="block";
+      }
+      else{
+        document.getElementById("forwardButton").style.display="block";
+        document.getElementById("backButton").style.display="block";
+      }
+    }
+    //navigate modal with keys
+    $(document).keydown(function(e) {
+      //if modal not open then ignore
+      if(document.getElementById('myModal').style.display==='none') return;
+      switch(e.which) {
+
+        //left
+        case 37:
+          //if not first 
+          if(document.getElementById("backButton").style.display==="none") break;
+          else imageBack();
+        break;
+
+        //right
+        case 39:
+          if(document.getElementById("forwardButton").style.display==="none") break;
+          else imageForward();
+        break;
+
+        //esc
+        case 27:
+          document.getElementById("myModal").style.display="none"
+        break;
+
+        default: return; // exit this handler for other keys
+      }
+      e.preventDefault(); // prevent the default action (scroll / move caret)
+    });
+
+    $( document ).ready(function() {
+      var windowWidth = $(window).width();
+      if(windowWidth < 701){
+        document.getElementById("vid").width = windowWidth - 20;
+        document.getElementById("vid").height = (525 / 700) * (windowWidth - 20);
+      }
+    });
+  </script>
+
+
+ 
+</body>
+</html>
