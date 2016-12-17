@@ -11,6 +11,7 @@
   	<link href="css/bootstrap.min.css" rel="stylesheet">
   	<link rel="stylesheet" type="text/css" href="wtf.css">
     <link rel="stylesheet" type="text/css" href="nav.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Special+Elite" />
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Mono">
@@ -63,13 +64,13 @@
       </center>
     </div>
     <div class="row">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
         <center>
           <img src="images/WhatTheFuck/15435752_1150384788372930_513819897_n.jpg">
         </center>
       </div>
-      <div class="col-sm-2"></div>
+      <div class="col-sm-3"></div>
     </div>
     <div class="row">
       <div class="col-sm-2"></div>
@@ -82,7 +83,56 @@
       </div>
       <div class="col-sm-2"></div>
     </div>
+
+    <!--gallery-->
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-12">
+            <center>
+              <img onClick="activateModal(document.getElementById('img01'))" class="galleryImage" style="max-width: 49%;" src="images/WhatTheFuck/15325242_1150250425053033_4056252152536911245_o.jpg">
+              <img onClick="activateModal(document.getElementById('img02'))" class="galleryImage" style="max-width: 49%;" src="images/WhatTheFuck/15326079_1150250168386392_305200426940923393_o.jpg">
+            </center>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <center>
+              <img onClick="activateModal(document.getElementById('img03'))" class="galleryImage" style="max-width: 49%;" src="images/WhatTheFuck/15370046_1150250248386384_2865762028335812512_o.jpg">
+              <img onClick="activateModal(document.getElementById('img04'))" class="galleryImage" style="max-width: 49%;" src="images/WhatTheFuck/15370187_1150250375053038_2823960217205639041_o.jpg">
+            </center>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <center>
+              <img onClick="activateModal(document.getElementById('img05'))" class="galleryImage" style="max-width: 49%;" src="images/WhatTheFuck/15385440_1150250651719677_6684146369474898329_o.jpg">
+              <img onClick="activateModal(document.getElementById('img06'))" class="galleryImage" style="max-width: 49%;" src="images/WhatTheFuck/15419542_1150250141719728_7916236494775223573_o.jpg">
+            </center>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <center>
+              <img onClick="activateModal(document.getElementById('img07'))" class="galleryImage" style="max-width: 49%;" src="images/WhatTheFuck/15419589_1150250405053035_2252660112976467692_o.jpg">
+              <img onClick="activateModal(document.getElementById('img08'))" class="galleryImage" style="max-width: 49%;" src="images/WhatTheFuck/15419744_1150250555053020_7218458970399857770_o.jpg">
+            </center>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+
+    <!--need to add hidden photos (the ones to be opened in modal) and then crop ones that are not rectangular with croppola. then add the java-->
+    
+
+
+      
+
   </div>
+
+
 
 </body>
 </html>
