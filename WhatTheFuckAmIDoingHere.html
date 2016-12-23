@@ -127,18 +127,143 @@
     <!--need to add hidden photos (the ones to be opened in modal) and then crop ones that are not rectangular with croppola. then add the java-->
     <div class="hidden">
       <img id="img01" class="galleryImage" src="images/WhatTheFuck/15325242_1150250425053033_4056252152536911245_o.jpg" alt="Shooting the Trailer with Haley Withers Photography">
-      <img id="img02" class="galleryImage" src="images/WhatTheFuck/thumb-15326079_1150250168386392_305200426940923393_o.jpg" alt="Toronto Fringe 2014">
+      <img id="img02" class="galleryImage" src="images/WhatTheFuck/15326079_1150250168386392_305200426940923393_o.jpg" alt="Toronto Fringe 2014">
       <img id="img05" class="galleryImage" src="images/WhatTheFuck/15385440_1150250651719677_6684146369474898329_o.jpg" alt="Performing in Ottawa">
-      <img id="img06" class="galleryImage" src="images/WhatTheFuck/5419542_1150250141719728_7916236494775223573_o.jpg" alt="KTS - Halifax">
+      <img id="img06" class="galleryImage" src="images/WhatTheFuck/15419542_1150250141719728_7916236494775223573_o.jpg" alt="KTS - Halifax">
       <img id="img07" class="galleryImage" src="images/WhatTheFuck/15419589_1150250405053035_2252660112976467692_o.jpg">
       <img id="img08" class="galleryImage" src="images/WhatTheFuck/15419744_1150250555053020_7218458970399857770_o.jpg" alt="Rehearsing for Our Show at Our Old Alma Mater, Canterbury">
       <!--8 in gallery-->
     </div>
 
+        <!--modal-->
+    <div id="myModal" class="modal">
+      <!-- The Close Button -->
+      <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
 
-      
+      <!--forward button-->
+      <span id="forwardButton" class="forward" onclick="imageForward()">&gt;</span>
 
+      <!--back button-->
+      <span id="backButton" class="back" onclick="imageBack()">&lt;</span>
+
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="modalImage">
+
+      <!-- Modal Caption (Image Text) -->
+      <div id="caption"></div>
+    </div>
   </div>
+
+  <script>
+    //create array of all the images in gallery in order to scroll through them
+    var imageList=["img01", "img02", "img03", "img04", "img05", "img06", "img07", "img08"];
+    var currentImage;//maybe use this for name purposes cause my not be able to pull id from anywehre else outside of contect of function
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById("modalImage");
+    var captionText = document.getElementById("caption");
+
+    //function for placing the image in the modal
+    function activateModal(img){
+      modal.style.display="block";
+      modalImg.src = img.src; //puts image this image in the modal
+      modalImg.alt = img.alt; //sets up for the caption
+      captionText.innerHTML = img.alt; //places the caption
+      currentImage = img.id; //mark the current image
+      checkArrows(img.id); //hide or display arrows to scroll
+    }
+
+    //move forward in the gallery
+    function imageForward(){
+      //if arrow is hidden, no more to scroll to and so just return
+      if(document.getElementById("forwardButton").style.display === "none"){
+        return;
+      }
+
+      //else take next image 
+      var newIndex = imageList.indexOf(currentImage) + 1; //get index of array
+      var newImage = imageList[newIndex]; //get the name
+      newImage = document.getElementById(newImage); //get the element
+
+      //replace it in modal
+      modalImg.src = newImage.src;
+      modalImg.alt = newImage.alt;
+      captionText.innerHTML = newImage.alt;
+
+      //update current image and check arrows
+      currentImage = newImage.id;
+      checkArrows(currentImage);
+    }
+
+    //move back in the gallery
+    function imageBack(){
+      //if arrow is hidden, no more to scroll to and so just return
+        if(document.getElementById("backButton").style.display === "none"){
+        return;
+      }
+
+      //else take next image 
+      var newIndex = imageList.indexOf(currentImage) - 1; //get index of array
+      var newImage = imageList[newIndex]; //get the name
+      newImage = document.getElementById(newImage); //get the element
+
+      //replace it in modal
+      modalImg.src = newImage.src;
+      modalImg.alt = newImage.alt;
+      captionText.innerHTML = newImage.alt;
+
+      //update current image and check arrows
+      currentImage = newImage.id;
+      checkArrows(currentImage);
+    }
+
+    //check if there should be forward and back arrows according to where in the gallery
+    function checkArrows(imageName){
+      //ifthere should be no back button
+      if(imageList.indexOf(imageName) === 0){
+        document.getElementById("backButton").style.display="none";
+        document.getElementById("forwardButton").style.display="block";
+      }
+      //if there should be no forward button
+      else if(imageList.indexOf(imageName) === imageList.length - 1){
+        document.getElementById("forwardButton").style.display="none";
+        document.getElementById("backButton").style.display="block";
+      }
+      else{
+        document.getElementById("forwardButton").style.display="block";
+        document.getElementById("backButton").style.display="block";
+      }
+    }
+    //navigate modal with keys
+    $(document).keydown(function(e) {
+      //if modal not open then ignore
+      if(document.getElementById('myModal').style.display==='none') return;
+      switch(e.which) {
+
+        //left
+        case 37:
+          //if not first 
+          if(document.getElementById("backButton").style.display==="none") break;
+          else imageBack();
+        break;
+
+        //right
+        case 39:
+          if(document.getElementById("forwardButton").style.display==="none") break;
+          else imageForward();
+        break;
+
+        //esc
+        case 27:
+          document.getElementById("myModal").style.display="none"
+        break;
+
+        default: return; // exit this handler for other keys
+      }
+      e.preventDefault(); // prevent the default action (scroll / move caret)
+    });
+  </script>
 
 
 
