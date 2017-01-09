@@ -10,3 +10,12 @@ img{
 p{
 	font-size: 18px;
 }
+.reviews{
+  text-align: center;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+.cite{
+	font-style: normal;
+}
